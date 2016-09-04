@@ -1,0 +1,38 @@
+/* [Membership Login]
+-------------------------------------------------------*/
+.membership-login {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+
+  .btn-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+
+  .btn-wrap,
+  .login-form {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .login-form {
+    position: relative;
+    margin: 15px;
+    padding: 40px;
+    border: solid $c-neutral-2 1px;
+  }
+
+  .message-wrap {
+    max-width: 100%;
+    margin-bottom: 10px;
+    font-weight: 400;
+  }
+
+  .btn-wrap {
+    text-align: center;
+  }
+
+}

@@ -1,0 +1,59 @@
+/* [Buttons]
+-------------------------------------------------------*/
+.btn {
+  display: inline-block;
+  padding: 6px 30px;
+  font-size: 1em;
+  font-weight: 400;
+  border: none;
+}
+
+.btn-primary {
+  color: $c-neutral-white;
+  background: $c-brand-primary;
+
+  &:hover,
+  &:focus,
+  &.is-active {
+    background: darken($c-brand-primary, 5%);
+  }
+
+}
+
+.btn-lg {
+  padding: 10px 45px;
+  font-size: 1.25em;
+}
+
+.btn-close {
+  display: inline-block;
+  position: relative;
+  width: 18px;
+  height: 18px;
+
+  &:before,
+  &:after {
+    position: absolute;
+    left: 7px;
+    content: '';
+    height: 19px;
+    width: 1px;
+    background: $c-neutral-black;
+  }
+
+  &:before {
+    transform: rotate(45deg);
+  }
+
+  &:after {
+    transform: rotate(-45deg);
+  }
+
+  &:hover,
+  &:focus,
+  &:active,
+  &.active {
+    opacity: .6;
+  }
+
+}
