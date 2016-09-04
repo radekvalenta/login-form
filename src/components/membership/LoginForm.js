@@ -8,16 +8,17 @@ class LoginBtn extends React.Component {
     super(props, context);
 
     this.state = {
+      loginForm: Object.assign({}, props.loginForm),
       user: Object.assign({}, props.user)
     };
 
-    this.handleClick = this.handleClick.bind(this);
+    this.handleClose = this.handleClose.bind(this);
     this.updateLoginForm = this.updateLoginForm.bind(this);
     this.doLogin = this.doLogin.bind(this);
   }
 
-  handleClick() {
-    let loginForm = {};
+  handleClose() {
+    let loginForm = this.state.loginForm;
     loginForm.visible = false;
     this.props.actions.showLogin(loginForm);
   }
@@ -82,7 +83,7 @@ class LoginBtn extends React.Component {
           <input className="btn btn-primary" type="submit" value="LOGIN" />
         </form>
         <a href="javascript:;" className="btn-close"
-          onClick={this.handleClick}>
+          onClick={this.handleClose}>
           <span className="hide-visually">CLOSE</span>
         </a>
       </div>

@@ -9,10 +9,11 @@ import TemplateDefault from './components/TemplateDefault';
 const STORE = configureStore();
 
 //  JUST FOR DEV!!!
+/*
 STORE.subscribe(() => {
   console.log('Store changed: ', STORE.getState());
 });
-
+*/
 render(
   <Provider store={STORE}>
     <TemplateDefault />

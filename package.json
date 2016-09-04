@@ -2,7 +2,7 @@
   "name": "login-form",
   "version": "1.0.0",
   "description": "Simple login form with react and redux",
-  "main": "index.js",
+  "main": "main.js",
   "author": "Radek Valenta",
   "license": "ISC",
   "dependencies": {

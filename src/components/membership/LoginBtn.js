@@ -7,11 +7,15 @@ class LoginBtn extends React.Component {
   constructor(props, context) {
     super(props, context);
 
-    this.handleClick = this.handleClick.bind(this);
+    this.state = {
+      loginForm: Object.assign({}, props.loginForm)
+    };
+
+    this.handleOpen = this.handleOpen.bind(this);
   }
 
-  handleClick() {
-    let loginForm = {};
+  handleOpen() {
+    let loginForm = this.state.loginForm;
     loginForm.visible = true;
     this.props.actions.showLogin(loginForm);
   }
@@ -23,7 +27,7 @@ class LoginBtn extends React.Component {
     return (
       <div className={IS_VISIBLE}>
         <button className="btn btn-primary btn-lg"
-          onClick={this.handleClick}>LOGIN</button>
+          onClick={this.handleOpen}>LOGIN</button>
       </div>
     );
   }

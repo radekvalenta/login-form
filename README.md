@@ -11,4 +11,4 @@ To start and run project type gulp in your terminal, this will start server and 
 If  you get port already used error, alter port number in gulpfile.js
 
 ### Technology used
-HTML5, SASS, react, redux, gulp
+HTML5, SASS, react, redux, thunk, gulp
