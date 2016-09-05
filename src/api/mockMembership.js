@@ -5,8 +5,7 @@ class membershipApi {
     return new Promise((resolve, reject) => {
       setTimeout(() => {
 
-        if (typeof user.username !== 'undefined'
-          && typeof user.password !== 'undefined') {
+        if (user.username.length > 0 && user.password.length > 0) {
           // Simulate server-side user validation
           // Lowercase and remove all non-alphanumeric characters
           // and reverse password
@@ -18,12 +17,13 @@ class membershipApi {
               return false;
             }
           })();
+
+          // password should never be returned
+          user.password = '';
+
+          resolve(user);
         }
 
-        // password should never be returned
-        user.password = '';
-
-        resolve(user);
       }, DELAY);
     });
   }
